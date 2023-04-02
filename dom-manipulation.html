@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom manipulation</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <style>
+       
+    </style>
+</head>
+<body>
+
+    <div ng-app="myApp" ng-controller="myCtrl" id="mainWrap">
+        
+        <!-- <div id="list">
+            <span></span>
+        </div> -->
+		
+
+    </div>
+	<br>
+	
+	<code>
+				var app = angular.module("myApp", []); <br>
+				app.controller("myCtrl", function($scope) {<br>
+                thisRef = $scope;<br>
+                const mainDiv = document.querySelector("#mainWrap");<br>
+                const listDiv = document.querySelector(".list");<br>
+                const body = document.body;<br>
+                const div = document.createElement('div');<br>
+                const span1 = document.createElement('span');<br>
+                const span2 = document.createElement('span');<br>
+                const span3 = document.createElement('span');<br>
+                mainDiv.append(div);<br>
+                // div.innerText = ('Hello World!');<br>
+                div.classList.toggle('list', false);<br>
+                // div.classList.add('list');<br>
+                // listDiv.append(spanElement);<br>
+                div.append(span1);<br>
+                div.append(span2)<br>
+                div.append(span3)<br>
+                span1.innerText = 'Hello World!'<br>
+                span2.innerText = 'JavaScript'<br>
+                span3.innerText = 'Js Dynamic'<br>
+                span1.style.display = "block"<br>
+                span2.style.display = "block"<br>
+                span1.style.color = "red"<br>
+                span1.style.fontWeight = "bold"<br>
+                span3.style.backgroundColor = "yellow"<br>
+                span3.getAttribute(title)<br>
+
+                //what is different between innerText and textContent<br>
+                //innerText show on visible content and textContent show both hide and visible content
+
+                
+        });
+		</code>
+
+    <script>
+        var app = angular.module("myApp", []);
+            app.controller("myCtrl", function($scope) {
+                thisRef = $scope;
+                const mainDiv = document.querySelector("#mainWrap");
+                const listDiv = document.querySelector(".list");
+                const body = document.body;
+                const div = document.createElement('div');
+                const span1 = document.createElement('span');
+                const span2 = document.createElement('span');
+                const span3 = document.createElement('span');
+                mainDiv.append(div);
+                // div.innerText = ('Hello World!');
+                div.classList.toggle('list', false);
+                // div.classList.add('list');
+                // listDiv.append(spanElement);
+                div.append(span1);
+                div.append(span2)
+                div.append(span3)
+                span1.innerText = 'Hello World!'
+                span2.innerText = 'JavaScript'
+                span3.innerText = 'Js Dynamic'
+                span1.style.display = "block"
+                span2.style.display = "block"
+                span1.style.color = "red"
+                span1.style.fontWeight = "bold"
+                span3.style.backgroundColor = "yellow"
+                span3.getAttribute(title)
+
+                //what is different between innerText and textContent
+                //innerText show on visible content and textContent show both hide and visible content
+
+
+
+
+                
+        });
+
+    </script>
+    
+</body>
+</html>
